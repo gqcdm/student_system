@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="load" extends="struts-default" namespace="/load">
+<!--        验证码-->
+        <action name="code" class="wangwei.util.ValidationCodeAction">
+            <result name="success"></result>
+        </action>
+<!--        注册-->
+        <action name="regist" class="wangwei.controller.LoadController" method="regist">
+            <result name="success">/back/login.jsp</result>
+        </action>
+<!--        登陆-->
+        <action name="login" class="wangwei.controller.LoadController" method="login">
+            <result name="success">/back/index.jsp</result>
+        </action>
+    </package>
+</struts>
